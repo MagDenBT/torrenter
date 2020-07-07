@@ -61,6 +61,7 @@
     <Compile Include="IServerConnector.cs" />
     <Compile Include="Query.cs" />
     <Compile Include="Service.cs" />
+    <Compile Include="SessionArguments.cs" />
     <Compile Include="TorrentActions.cs" />
     <Compile Include="TorrentMutators.cs" />
     <Page Include="MainWindow.xaml">
