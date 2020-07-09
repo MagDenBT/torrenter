@@ -8,12 +8,9 @@ namespace Torrneter
 {
     public interface IQueryFactory
     {
+        #region Torrent requests
 
-        #region Torrent Action
-     
-   
-      
-     
+        #region Actions
 
         /// <summary>
         /// Stop, start, verify or reannouncing torrent
@@ -24,19 +21,21 @@ namespace Torrneter
 
         #endregion
 
-        #region Torrent Mutators
+        #region Mutators
 
         void TorrentSet(TorrentMutators mutators);
         #endregion
 
         #region Torrent Accessors
+
+
         /// <summary>
-        /// Getting torrent information
+        /// Getting a torrent information
         /// </summary>
         /// <param name="ID"></param>
         /// <returns>See returning class fields</returns>
         TorrentInfo TorrentGet(IDTorrent ID);
-    
+
         #endregion
 
         #region Adding a Torrent
@@ -52,6 +51,7 @@ namespace Torrneter
         void RemoveTorrent(IDTorrent ID, bool DeleteLocalData);
         #endregion
 
+        #endregion
         #region Moving a Torrent
 
         /// <summary>
@@ -85,20 +85,20 @@ namespace Torrneter
 
         #region Session Requests
 
-   
-       
+
+
         void SessionSet(SessionSetArguments sessionSetArguments);
-    
 
-     
+
+
         void SessionGet(ref SessionGetArgument sessionGetArgument);
-    
 
-       
+
+
         SessionStats SessionGetStats();
-      
 
-       
+
+
 
         /// <summary>
         /// 

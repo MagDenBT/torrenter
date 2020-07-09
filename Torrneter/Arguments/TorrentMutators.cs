@@ -1,16 +1,50 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Torrneter
 {
     /// <summary>
-    /** Just as an empty "ids" value is shorthand for "all ids", using an empty array
+    /** Using an empty array
         for "files-wanted", "files-unwanted", "priority-high", "priority-low", or
         "priority-normal" is shorthand for saying "all files"
     */
     /// </summary>
     public class TorrentMutators
     {
-        private int bandwidthPriority;
+        private KeyValuePair<FieldConnector, int> bandwidthPriority;
+        private KeyValuePair<FieldConnector, int> downloadLimit;
+        private KeyValuePair<FieldConnector, bool> downloadLimited;
+        private KeyValuePair<FieldConnector, int[]> filesWanted;
+        private KeyValuePair<FieldConnector, int[]> filesUnwanted;
+        private KeyValuePair<FieldConnector, bool> honorsSessionLimits;
+        private KeyValuePair<FieldConnector, IDTorrent> ids;
+        private KeyValuePair<FieldConnector, string[]> labels;
+        private KeyValuePair<FieldConnector, string> location;
+        private KeyValuePair<FieldConnector, int> peerLimit;
+        private KeyValuePair<FieldConnector, int[]> priorityHigh;
+        private KeyValuePair<FieldConnector, int[]> priorityLow;
+        private KeyValuePair<FieldConnector, int> queuePosition;
+        private KeyValuePair<FieldConnector, int> seedIdleMode;
+        private KeyValuePair<FieldConnector, int[]> priorityNormal;
+        private KeyValuePair<FieldConnector, int> seedRatioMode;
+        private KeyValuePair<FieldConnector, int> seedIdleLimit;
+        private KeyValuePair<FieldConnector, double> seedRatioLimit;
+        private KeyValuePair<FieldConnector, string[]> trackerAdd;
+        private KeyValuePair<FieldConnector, int[]> trackerRemove;
+        private KeyValuePair<FieldConnector, Dictionary<int, string>> trackerReplace;
+        private KeyValuePair<FieldConnector, int> uploadLimit;
+        private KeyValuePair<FieldConnector, bool> uploadLimited;
+
+        public TorrentMutators()
+        {
+            SetConnectors();
+        }
+
+        private void SetConnectors()
+        {
+            
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// this torrent's bandwidth tr_priority_t
@@ -25,10 +59,9 @@ namespace Torrneter
         /// </summary>
         public void SetBandwidthPriority(int value)
         {
-            bandwidthPriority = value;
+            bandwidthPriority
         }
 
-        private int downloadLimit;
 
         /// <summary>
         /// maximum download speed (KBps)
@@ -46,7 +79,6 @@ namespace Torrneter
             downloadLimit = value;
         }
 
-        private bool downloadLimited;
 
         /// <summary>
         /// true if "downloadLimit" is honored
@@ -64,15 +96,15 @@ namespace Torrneter
             downloadLimited = value;
         }
 
-        private int[] filesWanted;
 
         /// <summary>
         /// indices of file(s) to download
         /// </summary>
         public int[] GetFilesWanted()
         {
-            return filesWanted;
+            return fileswanted;
         }
+
 
         /// <summary>
         /// indices of file(s) to download
@@ -82,7 +114,15 @@ namespace Torrneter
             filesWanted = value;
         }
 
-        private int[] filesUnwanted;
+          /// <summary>
+        /// indices of file(s) to not download
+        /// </summary>
+        public int[] GetFilesUnwanted()
+        {
+            return filesUnwanted;
+        }
+
+
 
         /// <summary>
         /// indices of file(s) to not download
@@ -100,7 +140,6 @@ namespace Torrneter
             filesUnwanted = value;
         }
 
-        private bool honorsSessionLimits;
 
         /// <summary>
         /// true if session upload limits are honored
@@ -118,7 +157,6 @@ namespace Torrneter
             honorsSessionLimits = value;
         }
 
-        private IDTorrent ids;
 
         /// <summary>
         /// list of torrent id numbers, sha1 hash strings, or both
@@ -136,7 +174,6 @@ namespace Torrneter
             ids = value;
         }
 
-        private string[] labels;
 
         /// <summary>
         /// array of string labels
@@ -154,7 +191,6 @@ namespace Torrneter
             labels = value;
         }
 
-        private string location;
 
         /// <summary>
         /// new location of the torrent's content
@@ -172,7 +208,6 @@ namespace Torrneter
             location = value;
         }
 
-        private int peerLimit;
 
         /// <summary>
         /// maximum number of peers
@@ -190,7 +225,6 @@ namespace Torrneter
             peerLimit = value;
         }
 
-        private int[] priorityHigh;
 
         /// <summary>
         /// indices of high-priority file(s)
@@ -208,7 +242,6 @@ namespace Torrneter
             priorityHigh = value;
         }
 
-        private int[] priorityLow;
 
         /// <summary>
         /// indices of low-priority file(s)
@@ -226,7 +259,6 @@ namespace Torrneter
             priorityLow = value;
         }
 
-        private int[] priorityNormal;
 
         /// <summary>
         /// indices of normal-priority file(s)
@@ -244,7 +276,6 @@ namespace Torrneter
             priorityNormal = value;
         }
 
-        private int queuePosition;
 
         /// <summary>
         /// position of this torrent in its queue [0...n)
@@ -262,7 +293,6 @@ namespace Torrneter
             queuePosition = value;
         }
 
-        private int seedIdleLimit;
 
         /// <summary>
         /// torrent-level number of minutes of seeding inactivity
@@ -280,7 +310,6 @@ namespace Torrneter
             seedIdleLimit = value;
         }
 
-        private int seedIdleMode;
 
         /// <summary>
         /// which seeding inactivity to use.  See tr_idlelimit
@@ -298,7 +327,6 @@ namespace Torrneter
             seedIdleMode = value;
         }
 
-        private double seedRatioLimit;
 
         /// <summary>
         /// torrent-level seeding ratio
@@ -316,7 +344,6 @@ namespace Torrneter
             seedRatioLimit = value;
         }
 
-        private int seedRatioMode;
 
         /// <summary>
         /// which ratio to use.  See tr_ratiolimit
@@ -334,7 +361,6 @@ namespace Torrneter
             seedRatioMode = value;
         }
 
-        private string[] trackerAdd;
 
         /// <summary>
         /// strings of announce URLs to add
@@ -352,7 +378,6 @@ namespace Torrneter
             trackerAdd = value;
         }
 
-        private int[] trackerRemove;
 
         /// <summary>
         /// ids of trackers to remove
@@ -370,14 +395,13 @@ namespace Torrneter
             trackerRemove = value;
         }
 
-        private Dictionary<int, string> trackerReplace1;
 
         /// <summary>
         /// pairs of <trackerId/new announce URLs>
         /// </summary>
         public Dictionary<int, string> GettrackerReplace()
         {
-            return trackerReplace1;
+            return trackerReplace;
         }
 
         /// <summary>
@@ -385,10 +409,9 @@ namespace Torrneter
         /// </summary>
         public void SettrackerReplace(Dictionary<int, string> value)
         {
-            trackerReplace1 = value;
+            trackerReplace = value;
         }
 
-        private int uploadLimit;
 
         /// <summary>
         /// maximum upload speed (KBps)
@@ -406,7 +429,6 @@ namespace Torrneter
             uploadLimit = value;
         }
 
-        private bool uploadLimited;
 
         /// <summary>
         /// true if "uploadLimit" is honored
