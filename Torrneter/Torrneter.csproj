@@ -55,15 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class1.cs" />
-    <Compile Include="IDTorrent.cs" />
+    <Compile Include="Arguments\Direction.cs" />
+    <Compile Include="Arguments\SessionStats.cs" />
+    <Compile Include="TempSketches\Class1.cs" />
+    <Compile Include="Arguments\IDTorrent.cs" />
     <Compile Include="IQueryFactory.cs" />
-    <Compile Include="IServerConnector.cs" />
-    <Compile Include="Query.cs" />
-    <Compile Include="Service.cs" />
-    <Compile Include="SessionArguments.cs" />
-    <Compile Include="TorrentActions.cs" />
-    <Compile Include="TorrentMutators.cs" />
+    <Compile Include="TempSketches\IServerConnector.cs" />
+    <Compile Include="TempSketches\Query.cs" />
+    <Compile Include="TempSketches\Service.cs" />
+    <Compile Include="Arguments\SessionGetArgument.cs" />
+    <Compile Include="Arguments\SessionSetArgument.cs" />
+    <Compile Include="Arguments\TorrentActions.cs" />
+    <Compile Include="Arguments\TorrentMutators.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,7 +98,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram.cd" />
+    <None Include="TempSketches\ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,5 +110,6 @@
   <ItemGroup>
     <Resource Include="Transmission WEB API.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -85,24 +85,50 @@ namespace Torrneter
 
         #region Session Requests
 
-        #region  Mutators
+   
        
         void SessionSet(SessionSetArguments sessionSetArguments);
-        #endregion
+    
 
-        #region Accessors
+     
         void SessionGet(ref SessionGetArgument sessionGetArgument);
-        #endregion
+    
 
-        #region Statistics
+       
         SessionStats SessionGetStats();
-        #endregion
+      
 
-    #region Blocklist
+       
 
-        
-         int BlocklistUpdate();
-	#endregion
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>a number "blocklist-size"</returns>
+        int BlocklistUpdate();
+
+        /// <summary>
+        /// This method tests to see if your incoming peer port is accessible
+        /// from the outside world.
+        /// </summary>
+        /// <returns></returns>
+        bool PortOpen();
+
+        /// <summary>
+        /// This method tells the transmission session to shut down.
+        /// </summary>
+        void SessionClose();
+
+
+        void QueueMove(Direction direction, IDTorrent ID);
+
+        /// <summary>
+        /// This method tests how much free space is available in a
+        /// client-specified folder.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>number  the size, in bytes, of the free space in that directory</returns>
+        int FreeSpace(string path);
+
 
         #endregion
     }
