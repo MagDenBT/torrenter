@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Torrneter.Arguments;
 
 namespace Torrneter
 {
@@ -11,47 +12,70 @@ namespace Torrneter
     /// </summary>
     public class TorrentMutators
     {
-        private KeyValuePair<FieldConnector, int> bandwidthPriority;
-        private KeyValuePair<FieldConnector, int> downloadLimit;
-        private KeyValuePair<FieldConnector, bool> downloadLimited;
-        private KeyValuePair<FieldConnector, int[]> filesWanted;
-        private KeyValuePair<FieldConnector, int[]> filesUnwanted;
-        private KeyValuePair<FieldConnector, bool> honorsSessionLimits;
-        private KeyValuePair<FieldConnector, IDTorrent> ids;
-        private KeyValuePair<FieldConnector, string[]> labels;
-        private KeyValuePair<FieldConnector, string> location;
-        private KeyValuePair<FieldConnector, int> peerLimit;
-        private KeyValuePair<FieldConnector, int[]> priorityHigh;
-        private KeyValuePair<FieldConnector, int[]> priorityLow;
-        private KeyValuePair<FieldConnector, int> queuePosition;
-        private KeyValuePair<FieldConnector, int> seedIdleMode;
-        private KeyValuePair<FieldConnector, int[]> priorityNormal;
-        private KeyValuePair<FieldConnector, int> seedRatioMode;
-        private KeyValuePair<FieldConnector, int> seedIdleLimit;
-        private KeyValuePair<FieldConnector, double> seedRatioLimit;
-        private KeyValuePair<FieldConnector, string[]> trackerAdd;
-        private KeyValuePair<FieldConnector, int[]> trackerRemove;
-        private KeyValuePair<FieldConnector, Dictionary<int, string>> trackerReplace;
-        private KeyValuePair<FieldConnector, int> uploadLimit;
-        private KeyValuePair<FieldConnector, bool> uploadLimited;
+        private CustomPair< int> bandwidthPriority;
+        private CustomPair< int> downloadLimit;
+        private CustomPair< bool> downloadLimited;
+        private CustomPair< int[]> filesWanted;
+        private CustomPair< int[]> filesUnwanted;
+        private CustomPair< bool> honorsSessionLimits;
+        private CustomPair< IDTorrent> ids;
+        private CustomPair< string[]> labels;
+        private CustomPair< string> location;
+        private CustomPair< int> peerLimit;
+        private CustomPair< int[]> priorityHigh;
+        private CustomPair< int[]> priorityLow;
+        private CustomPair< int> queuePosition;
+        private CustomPair< int> seedIdleMode;
+        private CustomPair< int[]> priorityNormal;
+        private CustomPair< int> seedRatioMode;
+        private CustomPair< int> seedIdleLimit;
+        private CustomPair< double> seedRatioLimit;
+        private CustomPair< string[]> trackerAdd;
+        private CustomPair< int[]> trackerRemove;
+        private CustomPair< Dictionary<int, string>> trackerReplace;
+        private CustomPair< int> uploadLimit;
+        private CustomPair< bool> uploadLimited;
+        
 
-        public TorrentMutators()
+      
+     public TorrentMutators(FieldConnector fieldConnector) 
         {
-            SetConnectors();
+            SetAllKeys(fieldConnector);
         }
 
-        private void SetConnectors()
+        private void SetAllKeys(FieldConnector fd)
         {
-            
-            throw new NotImplementedException();
+            bandwidthPriority = new CustomPair<int>(fd.GetApiAlias(nameof(bandwidthPriority)));
+            downloadLimit = new CustomPair<int>(fd.GetApiAlias(nameof(downloadLimit)));
+            downloadLimited = new CustomPair<bool>(fd.GetApiAlias(nameof(downloadLimited)));
+            filesWanted = new CustomPair<int[]>(fd.GetApiAlias(nameof(filesWanted)));
+            filesUnwanted = new CustomPair<int[]>(fd.GetApiAlias(nameof(filesUnwanted)));
+            honorsSessionLimits = new CustomPair<bool>(fd.GetApiAlias(nameof(honorsSessionLimits)));
+            ids = new CustomPair<IDTorrent>(fd.GetApiAlias(nameof(ids)));
+            labels = new CustomPair<string[]>(fd.GetApiAlias(nameof(labels)));
+            location = new CustomPair<string>(fd.GetApiAlias(nameof(location)));
+            peerLimit = new CustomPair<int>(fd.GetApiAlias(nameof(peerLimit)));
+            priorityHigh = new CustomPair<int[]>(fd.GetApiAlias(nameof(priorityHigh)));
+            priorityLow = new CustomPair<int[]>(fd.GetApiAlias(nameof(priorityLow)));
+            queuePosition = new CustomPair<int>(fd.GetApiAlias(nameof(queuePosition)));
+            seedIdleMode = new CustomPair<int>(fd.GetApiAlias(nameof(seedIdleMode)));
+            priorityNormal = new CustomPair<int[]>(fd.GetApiAlias(nameof(priorityNormal)));
+            seedRatioMode = new CustomPair<int>(fd.GetApiAlias(nameof(seedRatioMode)));
+            seedIdleLimit = new CustomPair<int>(fd.GetApiAlias(nameof(seedIdleLimit)));
+            seedRatioLimit = new CustomPair<double>(fd.GetApiAlias(nameof(seedRatioLimit)));
+            trackerAdd = new CustomPair<string[]>(fd.GetApiAlias(nameof(trackerAdd)));
+            trackerRemove = new CustomPair<int[]>(fd.GetApiAlias(nameof(trackerRemove)));
+            trackerReplace = new CustomPair<Dictionary<int, string>>(fd.GetApiAlias(nameof(trackerReplace)));
+            uploadLimit = new CustomPair<int>(fd.GetApiAlias(nameof(uploadLimit)));
+            uploadLimited = new CustomPair<bool>(fd.GetApiAlias(nameof(uploadLimited)));
         }
 
         /// <summary>
         /// this torrent's bandwidth tr_priority_t
         /// </summary>
-        public KeyValuePair<string, int> GetBandwidthPriority()
+        public int GetBandwidthPriority()
         {
-            return new KeyValuePair<string, int>("bandwidthPriority", bandwidthPriority);
+            return bandwidthPriority.Value;
         }
 
         /// <summary>
@@ -59,16 +83,24 @@ namespace Torrneter
         /// </summary>
         public void SetBandwidthPriority(int value)
         {
-            bandwidthPriority
+            bandwidthPriority.Value = value;
         }
+
+      
+      
 
 
         /// <summary>
         /// maximum download speed (KBps)
         /// </summary>
-        public KeyValuePair<string, int> GetDownloadLimit()
+        public int GetDownloadLimit()
         {
-            return new KeyValuePair<string, int>("downloadLimit", downloadLimit) ;
+            return downloadLimit.Value;
+        }
+
+        public string GetDownloadLimitAlias()
+        {
+            return downloadLimit.Alias;
         }
 
         /// <summary>
@@ -76,7 +108,7 @@ namespace Torrneter
         /// </summary>
         public void SetDownloadLimit(int value)
         {
-            downloadLimit = value;
+            downloadLimit.Value = value;
         }
 
 
@@ -85,7 +117,12 @@ namespace Torrneter
         /// </summary>
         public bool GetDownloadLimited()
         {
-            return downloadLimited;
+            return downloadLimited.Value;
+        }
+
+        public string GetDownloadLimitedAlias()
+        {
+            return downloadLimited.Alias;
         }
 
         /// <summary>
@@ -93,7 +130,7 @@ namespace Torrneter
         /// </summary>
         public void SetDownloadLimited(bool value)
         {
-            downloadLimited = value;
+            downloadLimited.Value = value;
         }
 
 
@@ -102,7 +139,14 @@ namespace Torrneter
         /// </summary>
         public int[] GetFilesWanted()
         {
-            return fileswanted;
+            return filesWanted.Value;
+        }
+
+
+
+        public string GetFilesWantedAlias()
+        {
+            return filesWanted.Alias;
         }
 
 
@@ -111,7 +155,7 @@ namespace Torrneter
         /// </summary>
         public void SetFilesWanted(int[] value)
         {
-            filesWanted = value;
+            filesWanted.Value =  value;
         }
 
           /// <summary>
@@ -119,25 +163,22 @@ namespace Torrneter
         /// </summary>
         public int[] GetFilesUnwanted()
         {
-            return filesUnwanted;
+            return filesUnwanted.Value;
         }
 
-
-
-        /// <summary>
-        /// indices of file(s) to not download
-        /// </summary>
-        public int[] GetFilesUnwanted()
+        public string GetFilesUnwantedAlias()
         {
-            return filesUnwanted;
+            return filesUnwanted.Alias;
         }
+
+
 
         /// <summary>
         /// indices of file(s) to not download
         /// </summary>
         public void SetFilesUnwanted(int[] value)
         {
-            filesUnwanted = value;
+            filesUnwanted.Value = value;
         }
 
 
@@ -146,15 +187,19 @@ namespace Torrneter
         /// </summary>
         public bool GetHonorsSessionLimits()
         {
-            return honorsSessionLimits;
+            return honorsSessionLimits.Value;
         }
 
+        public string GetHonorsSessionLimitsAlias()
+        {
+            return honorsSessionLimits.Alias;
+        }
         /// <summary>
         /// true if session upload limits are honored
         /// </summary>
         public void SetHonorsSessionLimits(bool value)
         {
-            honorsSessionLimits = value;
+            honorsSessionLimits.Value = value;
         }
 
 
@@ -163,15 +208,21 @@ namespace Torrneter
         /// </summary>
         public IDTorrent Getids()
         {
-            return ids;
+            return ids.Value;
         }
+
+        public string GetidsAlias()
+        {
+            return ids.Alias;
+        }
+
 
         /// <summary>
         /// list of torrent id numbers, sha1 hash strings, or both
         /// </summary>
         public void Setids(IDTorrent value)
         {
-            ids = value;
+            ids.Value = value;
         }
 
 
@@ -180,7 +231,12 @@ namespace Torrneter
         /// </summary>
         public string[] GetLabels()
         {
-            return labels;
+            return labels.Value;
+        }
+
+        public string GetLabelsAlias()
+        {
+            return labels.Alias;
         }
 
         /// <summary>
@@ -188,7 +244,7 @@ namespace Torrneter
         /// </summary>
         public void SetLabels(string[] value)
         {
-            labels = value;
+            labels.Value = value;
         }
 
 
@@ -197,7 +253,12 @@ namespace Torrneter
         /// </summary>
         public string GetLocation()
         {
-            return location;
+            return location.Value;
+        }
+
+        public string GetLocationAlias()
+        {
+            return location.Alias;
         }
 
         /// <summary>
@@ -205,7 +266,7 @@ namespace Torrneter
         /// </summary>
         public void SetLocation(string value)
         {
-            location = value;
+            location.Value = value;
         }
 
 
@@ -214,7 +275,12 @@ namespace Torrneter
         /// </summary>
         public int GetPeerLimit()
         {
-            return peerLimit;
+            return peerLimit.Value;
+        }
+
+        public string GetPeerLimitAlias()
+        {
+            return peerLimit.Alias;
         }
 
         /// <summary>
@@ -222,7 +288,7 @@ namespace Torrneter
         /// </summary>
         public void SetPeerLimit(int value)
         {
-            peerLimit = value;
+            peerLimit.Value = value;
         }
 
 
@@ -231,7 +297,12 @@ namespace Torrneter
         /// </summary>
         public int[] GetPriorityHigh()
         {
-            return priorityHigh;
+            return priorityHigh.Value;
+        }
+
+        public string GetPriorityHighAlias()
+        {
+            return priorityHigh.Alias;
         }
 
         /// <summary>
@@ -239,7 +310,7 @@ namespace Torrneter
         /// </summary>
         public void SetPriorityHigh(int[] value)
         {
-            priorityHigh = value;
+            priorityHigh.Value = value;
         }
 
 
@@ -248,7 +319,12 @@ namespace Torrneter
         /// </summary>
         public int[] GetPriorityLow()
         {
-            return priorityLow;
+            return priorityLow.Value;
+        }
+
+        public string GetPriorityLowAlias()
+        {
+            return priorityLow.Alias;
         }
 
         /// <summary>
@@ -256,7 +332,7 @@ namespace Torrneter
         /// </summary>
         public void SetPriorityLow(int[] value)
         {
-            priorityLow = value;
+            priorityLow.Value = value;
         }
 
 
@@ -265,7 +341,12 @@ namespace Torrneter
         /// </summary>
         public int[] GetPriorityNormal()
         {
-            return priorityNormal;
+            return priorityNormal.Value;
+        }
+
+        public string GetPriorityNormalAlias()
+        {
+            return priorityNormal.Alias;
         }
 
         /// <summary>
@@ -273,7 +354,7 @@ namespace Torrneter
         /// </summary>
         public void SetPriorityNormal(int[] value)
         {
-            priorityNormal = value;
+            priorityNormal.Value = value;
         }
 
 
@@ -282,7 +363,12 @@ namespace Torrneter
         /// </summary>
         public int GetQueuePosition()
         {
-            return queuePosition;
+            return queuePosition.Value;
+        }
+
+        public string GetQueuePositionAlias()
+        {
+            return queuePosition.Alias;
         }
 
         /// <summary>
@@ -290,7 +376,7 @@ namespace Torrneter
         /// </summary>
         public void SetQueuePosition(int value)
         {
-            queuePosition = value;
+            queuePosition.Value = value;
         }
 
 
@@ -299,7 +385,12 @@ namespace Torrneter
         /// </summary>
         public int GetSeedIdleLimit()
         {
-            return seedIdleLimit;
+            return seedIdleLimit.Value;
+        }
+
+        public string GetSeedIdleLimitAlias()
+        {
+            return seedIdleLimit.Alias;
         }
 
         /// <summary>
@@ -307,7 +398,7 @@ namespace Torrneter
         /// </summary>
         public void SetSeedIdleLimit(int value)
         {
-            seedIdleLimit = value;
+            seedIdleLimit.Value = value;
         }
 
 
@@ -316,7 +407,12 @@ namespace Torrneter
         /// </summary>
         public int GetSeedIdleMode()
         {
-            return seedIdleMode;
+            return seedIdleMode.Value;
+        }
+
+        public string GetSeedIdleModeAlias()
+        {
+            return seedIdleMode.Alias;
         }
 
         /// <summary>
@@ -324,7 +420,7 @@ namespace Torrneter
         /// </summary>
         public void SetSeedIdleMode(int value)
         {
-            seedIdleMode = value;
+            seedIdleMode.Value = value;
         }
 
 
@@ -333,7 +429,12 @@ namespace Torrneter
         /// </summary>
         public double GetSeedRatioLimit()
         {
-            return seedRatioLimit;
+            return seedRatioLimit.Value;
+        }
+
+        public string GetSeedRatioLimitAlias()
+        {
+            return seedRatioLimit.Alias;
         }
 
         /// <summary>
@@ -341,7 +442,7 @@ namespace Torrneter
         /// </summary>
         public void SetSeedRatioLimit(double value)
         {
-            seedRatioLimit = value;
+            seedRatioLimit.Value = value;
         }
 
 
@@ -350,15 +451,19 @@ namespace Torrneter
         /// </summary>
         public int GetSeedRatioMode()
         {
-            return seedRatioMode;
+            return seedRatioMode.Value;
         }
 
+        public string GetSeedRatioModeAlias()
+        {
+            return seedRatioMode.Alias;
+        }
         /// <summary>
         /// which ratio to use.  See tr_ratiolimit
         /// </summary>
         public void SetSeedRatioMode(int value)
         {
-            seedRatioMode = value;
+            seedRatioMode.Value = value;
         }
 
 
@@ -367,7 +472,11 @@ namespace Torrneter
         /// </summary>
         public string[] GetTrackerAdd()
         {
-            return trackerAdd;
+            return trackerAdd.Value;
+        }
+        public string[] GetTrackerAddAlias()
+        {
+            return trackerAdd.Alias;
         }
 
         /// <summary>
@@ -375,7 +484,7 @@ namespace Torrneter
         /// </summary>
         public void SetTrackerAdd(string[] value)
         {
-            trackerAdd = value;
+            trackerAdd.Value = value;
         }
 
 
@@ -384,7 +493,11 @@ namespace Torrneter
         /// </summary>
         public int[] GetTrackerRemove()
         {
-            return trackerRemove;
+            return trackerRemove.Value;
+        }
+        public int[] GetTrackerRemoveAlias()
+        {
+            return trackerRemove.Alias;
         }
 
         /// <summary>
@@ -392,7 +505,7 @@ namespace Torrneter
         /// </summary>
         public void SetTrackerRemove(int[] value)
         {
-            trackerRemove = value;
+            trackerRemove.Value = value;
         }
 
 
@@ -401,7 +514,11 @@ namespace Torrneter
         /// </summary>
         public Dictionary<int, string> GettrackerReplace()
         {
-            return trackerReplace;
+            return trackerReplace.Value;
+        }
+        public Dictionary<int, string> GettrackerReplaceAlias()
+        {
+            return trackerReplace.Alias;
         }
 
         /// <summary>
@@ -409,7 +526,7 @@ namespace Torrneter
         /// </summary>
         public void SettrackerReplace(Dictionary<int, string> value)
         {
-            trackerReplace = value;
+            trackerReplace.Value = value;
         }
 
 
@@ -418,7 +535,11 @@ namespace Torrneter
         /// </summary>
         public int GetUploadLimit()
         {
-            return uploadLimit;
+            return uploadLimit.Value;
+        }
+        public int GetUploadLimitAlias()
+        {
+            return uploadLimit.Alias;
         }
 
         /// <summary>
@@ -426,7 +547,7 @@ namespace Torrneter
         /// </summary>
         public void SetUploadLimit(int value)
         {
-            uploadLimit = value;
+            uploadLimit.Value = value;
         }
 
 
@@ -435,15 +556,20 @@ namespace Torrneter
         /// </summary>
         public bool GetUploadLimited()
         {
-            return uploadLimited;
+            return uploadLimited.Value;
+        }
+        public bool GetUploadLimitedAlias()
+        {
+            return uploadLimited.Alias;
         }
 
+        
         /// <summary>
         /// true if "uploadLimit" is honored
         /// </summary>
         public void SetUploadLimited(bool value)
         {
-            uploadLimited = value;
+            uploadLimited.Value = value;
         }
     }
 }

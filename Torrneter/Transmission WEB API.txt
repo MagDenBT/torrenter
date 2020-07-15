@@ -425,9 +425,7 @@ transmission/extras/rpc-spec.txt
    Set multiple cookies like this: "name1=content1; name2=content2;" etc.
    <http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIE>
 
-   Response arguments: On success, a "torrent-added" object in the
-                       form of one of 3.3's tr_info objects with the
-                       fields for id, name, and hashString.
+   Response arguments:  
 
                        On failure due to a duplicate torrent existing,
                        a "torrent-duplicate" object in the same form.

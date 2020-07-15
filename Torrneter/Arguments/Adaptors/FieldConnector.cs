@@ -1,4 +1,6 @@
-﻿namespace Torrneter
+﻿using System;
+
+namespace Torrneter
 {
     /// <summary>
     /// This constants provides argument field associations with string values accepted by the API.  
@@ -28,6 +30,13 @@
         public const string trackerReplace = "trackerReplace";
         public const string uploadLimit = "uploadLimit";
         public const string uploadLimited = "uploadLimited";
+
+        
+        public string GetApiAlias(string fieldName)
+        {
+            
+            throw new NotImplementedException();
+        }
 
     }
 }

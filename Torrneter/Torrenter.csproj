@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,10 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Arguments\CustomPair.cs" />
     <Compile Include="Arguments\Direction.cs" />
     <Compile Include="Arguments\Adaptors\FieldConnector.cs" />
     <Compile Include="Arguments\SessionStats.cs" />
-    <Compile Include="TempSketches\Class1.cs" />
     <Compile Include="Arguments\IDTorrent.cs" />
     <Compile Include="IQueryFactory.cs" />
     <Compile Include="TempSketches\IServerConnector.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Arguments\SessionSetArgument.cs" />
     <Compile Include="Arguments\TorrentActions.cs" />
     <Compile Include="Arguments\TorrentMutators.cs" />
+    <Compile Include="Arguments\TorrentInfo.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

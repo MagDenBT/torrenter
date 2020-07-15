@@ -10,8 +10,6 @@ namespace Torrneter
     {
         #region Torrent requests
 
-        #region Actions
-
         /// <summary>
         /// Stop, start, verify or reannouncing torrent
         /// </summary>
@@ -19,14 +17,14 @@ namespace Torrneter
         /// <param name="ID"></param>
         void TorrentAction(TorrentActions action, IDTorrent ID);
 
-        #endregion
+       
 
         #region Mutators
 
         void TorrentSet(TorrentMutators mutators);
         #endregion
 
-        #region Torrent Accessors
+        
 
 
         /// <summary>
@@ -36,7 +34,7 @@ namespace Torrneter
         /// <returns>See returning class fields</returns>
         TorrentInfo TorrentGet(IDTorrent ID);
 
-        #endregion
+        
 
         #region Adding a Torrent
         TorrentAdded TorrentAdd(NewTorrent NewTorrent);
