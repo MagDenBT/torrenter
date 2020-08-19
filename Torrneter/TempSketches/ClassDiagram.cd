@@ -1,31 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Torrneter.Service">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="1.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Service.cs</FileName>
+      <FileName>TempSketches\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Torrneter.ArgumentsFactory">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>ArgumentsFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="tagGenerator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Torrneter.StandartArgumentFactory">
+    <Position X="10.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>StandartArgumentFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Torrneter.IServerConnector">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Position X="1.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>IServerConnector.cs</FileName>
+      <FileName>TempSketches\IServerConnector.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Torrneter.IQueryFactory">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+  <Interface Name="Torrneter.IQueryFactory" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAwCAAAAAIAEBAAAAAAAEIAAAAAAAAAAIAAACAoIAYA=</HashCode>
       <FileName>IQueryFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="Torrneter.IArgumentField&lt;T&gt;">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITorField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Torrneter.ITagGenerator">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITagGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="Torrneter.Query">
-    <Position X="7.75" Y="2.5" Width="1.5" />
+    <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Query.cs</FileName>
+      <FileName>TempSketches\Query.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Torrneter.ArgumentType">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgSAhAAAIIABIEAAABQEIAAAAAAAAAAQAAACAoAAAA=</HashCode>
+      <FileName>ArgumentType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

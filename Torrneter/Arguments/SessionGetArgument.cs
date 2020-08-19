@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Windows;
+
+
 namespace Torrneter
 {
 	public class SessionGetArgument: SessionSetArguments
@@ -12,6 +15,9 @@ namespace Torrneter
 
 		public SessionGetArgument()
 		{
+			void Tst()
+			{
+			}	
 		}
 	}
 }

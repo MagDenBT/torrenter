@@ -56,12 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ArgumentsFactory.cs" />
     <Compile Include="Arguments\CustomPair.cs" />
     <Compile Include="Arguments\Direction.cs" />
     <Compile Include="Arguments\Adaptors\FieldConnector.cs" />
     <Compile Include="Arguments\SessionStats.cs" />
     <Compile Include="Arguments\IDTorrent.cs" />
+    <Compile Include="ArgumentType.cs" />
     <Compile Include="IQueryFactory.cs" />
+    <Compile Include="ITagGenerator.cs" />
+    <Compile Include="ITorField.cs" />
+    <Compile Include="StandartArgumentFactory.cs" />
+    <Compile Include="TempSketches\ChildableTest.cs" />
     <Compile Include="TempSketches\IServerConnector.cs" />
     <Compile Include="TempSketches\Query.cs" />
     <Compile Include="TempSketches\Service.cs" />
@@ -70,6 +76,8 @@
     <Compile Include="Arguments\TorrentActions.cs" />
     <Compile Include="Arguments\TorrentMutators.cs" />
     <Compile Include="Arguments\TorrentInfo.cs" />
+    <Compile Include="TempSketches\TestTemp.cs" />
+    <Compile Include="TempSketches\TorField.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
