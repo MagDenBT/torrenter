@@ -21,7 +21,7 @@ namespace Torrneter
 
 
         /// <summary></summary>
-        public abstract Dictionary<String, IArgumentField<object>> CreateArgumnets(ArgumentType type);
+        public abstract Array CreateArgumnets(ArgumentType type);
 
     }
 }

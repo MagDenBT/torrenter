@@ -9,6 +9,9 @@
   </Class>
   <Class Name="Torrneter.ArgumentsFactory">
     <Position X="9" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>ArgumentsFactory.cs</FileName>
@@ -20,9 +23,28 @@
   <Class Name="Torrneter.StandartArgumentFactory">
     <Position X="10.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAA=</HashCode>
       <FileName>StandartArgumentFactory.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="creator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Torrneter.TorrentStartCreator">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>TorrentActionCreator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.Argument">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Argument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Torrneter.IServerConnector">
     <Position X="1.25" Y="2" Width="1.5" />
@@ -38,18 +60,25 @@
       <FileName>IQueryFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Torrneter.IArgumentField&lt;T&gt;">
-    <Position X="5.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ITorField.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="Torrneter.ITagGenerator">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITagGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Torrneter.IArgumentCreator">
+    <Position X="10.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>IArgumentCreator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Torrneter.IArgumentField">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ArgumentField.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Torrneter.Query">

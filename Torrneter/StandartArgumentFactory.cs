@@ -7,7 +7,16 @@ namespace Torrneter
 {
     public class StandartArgumentFactory : ArgumentsFactory
     {
-        public override Dictionary<string, IArgumentField<object>> CreateArgumnets(ArgumentType type)
+        private IArgumentCreator creator;
+
+        public StandartArgumentFactory(ITagGenerator tagGenerator, IArgumentCreator creator)
+            :base(tagGenerator)
+        {
+            
+            this.creator = creator;
+        }
+
+        public override Array CreateArgumnets(ArgumentType type)
         {
             switch (type)
             {
@@ -63,6 +72,8 @@ namespace Torrneter
                     //to do
                     break;
             }
+
+
             throw new NotImplementedException();
         }
     }

@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Torrneter
 {
-    public interface IArgumentField<T>
+    public interface IArgumentCreator
     {
-        string GetFieldName();
-        T GetValue();
-        void PutValue(T value);
+        Dictionary<string, ArgumentField<object>> CreateArguments();
     }
 }
