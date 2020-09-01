@@ -21,7 +21,7 @@ namespace Torrneter
 
 
         /// <summary></summary>
-        public abstract Array CreateArgumnets(ArgumentType type);
+        public abstract IList CreateArgumnets(APIMethods type);
 
     }
 }

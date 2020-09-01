@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Torrneter
 {
-    public enum ArgumentType
+    public enum APIMethods
     {
         TorrentStart, TorrentStartNow, TorrentStop, TorrentVerify, TorrentReannounce,
         TorrentSet,

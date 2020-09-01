@@ -56,31 +56,48 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Argument.cs" />
-    <Compile Include="ArgumentsFactory.cs" />
-    <Compile Include="Arguments\CustomPair.cs" />
-    <Compile Include="Arguments\Direction.cs" />
-    <Compile Include="Arguments\Adaptors\FieldConnector.cs" />
-    <Compile Include="Arguments\SessionStats.cs" />
-    <Compile Include="Arguments\IDTorrent.cs" />
-    <Compile Include="ArgumentType.cs" />
-    <Compile Include="IArgumentCreator.cs" />
-    <Compile Include="IQueryFactory.cs" />
-    <Compile Include="ITagGenerator.cs" />
-    <Compile Include="ArgumentField.cs" />
-    <Compile Include="StandartArgumentFactory.cs" />
+    <Compile Include="API\Arguments\APIArgumentsContainer.cs" />
+    <Compile Include="ArgumentCreator.cs" />
+    <Compile Include="AssociationRPCProtocol.cs" />
+    <Compile Include="API\Arguments\APIContainer.cs" />
+    <Compile Include="Arguments\Argument.cs" />
+    <Compile Include="Arguments\ArgumentsFactory.cs" />
+    <Compile Include="Arguments\Deprecated\CustomPair.cs" />
+    <Compile Include="Arguments\Deprecated\Direction.cs" />
+    <Compile Include="Arguments\Deprecated\Adaptors\FieldConnector.cs" />
+    <Compile Include="Arguments\Deprecated\SessionStats.cs" />
+    <Compile Include="Arguments\Deprecated\IDTorrent.cs" />
+    <Compile Include="Arguments\Enums\APIMethods.cs" />
+    <Compile Include="Arguments\Arguments Creators\IArgumentCreator.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentSet.cs" />
+    <Compile Include="Arguments\Arguments Creators\Session Requests\CreatorArgSessionGet.cs" />
+    <Compile Include="Arguments\Arguments Creators\Session Requests\CreatorArgSessionSet.cs" />
+    <Compile Include="Arguments\Arguments Creators\Session Requests\CreatorArgSessionStats.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentAdd.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentGet.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentRemove.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentRenamePath.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentSetLocation.cs" />
+    <Compile Include="Arguments\Arguments Creators\Other\CreatorArgQueueMovement.cs" />
+    <Compile Include="Arguments\Arguments Creators\Other\CreatorArgFreeSpace.cs" />
+    <Compile Include="Arguments\Deprecated\IQueryFactory.cs" />
+    <Compile Include="Arguments\ITagGenerator.cs" />
+    <Compile Include="Arguments\IArgumentField.cs" />
+    <Compile Include="Arguments\StandartArgumentFactory.cs" />
+    <Compile Include="API\Arguments\IDataScheme.cs" />
+    <Compile Include="API\Arguments\DataScheme.cs" />
     <Compile Include="TempSketches\ChildableTest.cs" />
     <Compile Include="TempSketches\IServerConnector.cs" />
     <Compile Include="TempSketches\Query.cs" />
     <Compile Include="TempSketches\Service.cs" />
-    <Compile Include="Arguments\SessionGetArgument.cs" />
-    <Compile Include="Arguments\SessionSetArgument.cs" />
-    <Compile Include="Arguments\TorrentActions.cs" />
-    <Compile Include="Arguments\TorrentMutators.cs" />
-    <Compile Include="Arguments\TorrentInfo.cs" />
+    <Compile Include="Arguments\Deprecated\SessionGetArgument.cs" />
+    <Compile Include="Arguments\Deprecated\SessionSetArgument.cs" />
+    <Compile Include="Arguments\Deprecated\TorrentActions.cs" />
+    <Compile Include="Arguments\Deprecated\TorrentMutators.cs" />
+    <Compile Include="Arguments\Deprecated\TorrentInfo.cs" />
     <Compile Include="TempSketches\TestTemp.cs" />
     <Compile Include="TempSketches\TorField.cs" />
-    <Compile Include="TorrentActionCreator.cs" />
+    <Compile Include="Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentAction.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

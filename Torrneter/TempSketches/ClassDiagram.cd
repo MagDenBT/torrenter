@@ -9,40 +9,147 @@
   </Class>
   <Class Name="Torrneter.ArgumentsFactory">
     <Position X="9" Y="1.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
-      <FileName>ArgumentsFactory.cs</FileName>
+      <FileName>Arguments\ArgumentsFactory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="tagGenerator" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Torrneter.StandartArgumentFactory">
-    <Position X="10.75" Y="3.25" Width="1.5" />
+    <Position X="12" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAA=</HashCode>
-      <FileName>StandartArgumentFactory.cs</FileName>
+      <FileName>Arguments\StandartArgumentFactory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="creator" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Torrneter.TorrentStartCreator">
-    <Position X="13.5" Y="5.5" Width="1.5" />
+  <Class Name="Torrneter.CreatorArgTorrentAction" Collapsed="true">
+    <Position X="15.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
-      <FileName>TorrentActionCreator.cs</FileName>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentAction.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Torrneter.Argument">
-    <Position X="4.5" Y="2" Width="1.5" />
+  <Class Name="Torrneter.CreatorArgTorrentSet" Collapsed="true">
+    <Position X="14.25" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
-      <FileName>Argument.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgTorrentGet" Collapsed="true">
+    <Position X="13" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentGet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgTorrentAdd" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentAdd.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgTorrentRemove" Collapsed="true">
+    <Position X="13" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentRemove.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgTorrentRenamePath" Collapsed="true">
+    <Position X="16" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentRenamePath.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgTorrentSetLocation" Collapsed="true">
+    <Position X="16" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Torrent Requests\CreatorArgTorrentSetLocation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgSessionSet" Collapsed="true">
+    <Position X="14.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Session Requests\CreatorArgSessionSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgSessionGet" Collapsed="true">
+    <Position X="14.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Session Requests\CreatorArgSessionGet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgSessionStats" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Session Requests\CreatorArgSessionStats.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgQueueMovement" Collapsed="true">
+    <Position X="16" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Other\CreatorArgQueueMovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.CreatorArgFreeSpace" Collapsed="true">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Arguments\Arguments Creators\Other\CreatorArgFreeSpace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.APIContainer">
+    <Position X="15.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>API\Arguments\APIContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Torrneter.DataScheme">
+    <Position X="21.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAIAAAQAAAAAAAABQAAABAAgBAA=</HashCode>
+      <FileName>API\Arguments\DataScheme.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Torrneter.APIArgumentsContainer">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgABAAAAAQAAAAAAAAAABAQAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>API\Arguments\APIArgumentsContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Torrneter.ArgumentCreator">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>ArgumentCreator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -54,31 +161,38 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="Torrneter.IQueryFactory" Collapsed="true">
-    <Position X="2.25" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAwCAAAAAIAEBAAAAAAAEIAAAAAAAAAAIAAACAoIAYA=</HashCode>
-      <FileName>IQueryFactory.cs</FileName>
+      <FileName>Arguments\Deprecated\IQueryFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Torrneter.ITagGenerator">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ITagGenerator.cs</FileName>
+      <FileName>Arguments\ITagGenerator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Torrneter.IArgumentCreator">
-    <Position X="10.25" Y="5.5" Width="1.5" />
+    <Position X="13.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
-      <FileName>IArgumentCreator.cs</FileName>
+      <FileName>Arguments\Arguments Creators\IArgumentCreator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Torrneter.IArgumentField">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+    <Position X="7.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
-      <FileName>ArgumentField.cs</FileName>
+      <HashCode>AAAAAAAAIAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Arguments\IArgumentField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Torrneter.IDataScheme">
+    <Position X="18.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
+      <FileName>API\Arguments\IDataScheme.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Torrneter.Query">
@@ -88,11 +202,11 @@
       <FileName>TempSketches\Query.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Torrneter.ArgumentType">
-    <Position X="7.75" Y="4.25" Width="1.5" />
+  <Enum Name="Torrneter.APIMethods">
+    <Position X="9.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQgSAhAAAIIABIEAAABQEIAAAAAAAAAAQAAACAoAAAA=</HashCode>
-      <FileName>ArgumentType.cs</FileName>
+      <FileName>Arguments\Enums\APIMethods.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

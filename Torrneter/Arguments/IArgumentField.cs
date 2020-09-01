@@ -8,8 +8,7 @@ namespace Torrneter
     public interface IArgumentField
     {
         string GetFieldName();
-        object GetValue();
-        Type GetValueType();
-        void PutValue(object value);
+        T GetValue<T>();
+        void PutValue<T>(T value);
     }
 }

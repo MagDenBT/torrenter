@@ -7,6 +7,7 @@ namespace Torrneter
     /// </summary>
     public class FieldConnector
     {
+        
         public const string bandwidthPriority = "bandwidthPriority";
         public const string downloadLimit = "downloadLimit";
         public const string downloadLimited = "downloadLimited";
